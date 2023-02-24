@@ -27,7 +27,7 @@ const result2 = ` My name is ${myName} I am ${
 // console.log(result1);
 // console.log(result2);
 
-// const btn = document.querySelector(".btn");
+const btn = document.querySelector(".btn");
 
 const colors = [
 	"blue",
@@ -42,15 +42,15 @@ const colors = [
 	"#263238",
 ];
 
-// btn.addEventListener("click", () => {
-// 	const randomIndex = Math.floor(Math.random() * 10);
+btn.addEventListener("click", () => {
+	const randomIndex = Math.floor(Math.random() * 10);
 
-// 	const randomColor = colors[randomIndex];
+	const randomColor = colors[randomIndex];
 
-// 	btn.style.backgroundColor = randomColor;
-// 	// btn.innerText = "background-color: " + randomColor;
-// 	btn.innerText = `background-color:  ${randomColor}`;
-// });
+	btn.style.backgroundColor = randomColor;
+	// btn.innerText = "background-color: " + randomColor;
+	btn.innerText = `background-color:  ${randomColor}`;
+});
 
 const currencies = [
 	{
@@ -110,6 +110,9 @@ const currencies = [
 	},
 ];
 
+const thirdEl = currencies[2];
+// console.log(thirdEl.code);
+
 //array
 
 const prices = [10, 20, 30, 40];
@@ -117,6 +120,7 @@ const myArr = [
 	1,
 	2,
 	"text",
+	"iphone 14",
 	,
 	5,
 	true,
@@ -127,7 +131,8 @@ const myArr = [
 ];
 
 // console.log(prices);
-console.log(myArr);
+// myArr[0] = "text";
+// console.log(myArr);
 
 // console.error("some error");
 // console.table(prices);
@@ -138,13 +143,9 @@ const myNum1 = 1;
 // console.log(myArr[0], myArr["myNum1"], myArr[myNum1]);
 
 const firstEl = myArr[0];
-
 const myArrLength = myArr.length;
-
 const lastEl = myArr[myArrLength - 1];
-
 const lastElAt = myArr.at(-1);
-
 // console.log(lastEl, lastElAt);
 
 myArr.push(100);
@@ -161,3 +162,51 @@ const removedFirstEl = myArr.shift();
 
 const myArr2 = [[1, 2, 3], [10, 20], [[5, 15, 25], 20, 25], 24, 35];
 // console.log(myArr2, myArr2[2][0][0]);
+
+//objects
+const productTitle = "iphone 14";
+
+const product = {
+	name: productTitle,
+	price: 1000,
+	color: "#000",
+	description: "example text about product",
+	isAvailable: true,
+	shop: ["tbilisi 1", "tbilisi 2"],
+};
+
+// console.log(product);
+// console.table(product);
+// console.table(prices);
+
+const productPrice = product.price;
+// console.log(productPrice);
+// console.log(product.shop[0]);
+
+const resultColor = "color";
+// console.log(product.resultColor);
+// console.log(product[resultColor]);
+// product.price = 5000;
+// console.log(product);
+product.memory = "128gb";
+// console.log(product);
+
+let num = 200;
+let newNum = num;
+
+// console.log(num, newNum);
+
+newNum = 300;
+// console.log(num, newNum);
+
+const newProduct = {
+	model: "iphone",
+};
+
+const newProduct2 = newProduct;
+const newProduct3 = { ...newProduct };
+
+// console.log(newProduct, newProduct2, newProduct3);
+
+newProduct2.price = 3000;
+// console.log(newProduct, newProduct2, newProduct3);
